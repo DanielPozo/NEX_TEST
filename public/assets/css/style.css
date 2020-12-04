@@ -1,0 +1,91 @@
+.example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+.example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+
+#menu,#cuerpo{
+    margin-top:2%;
+}
+
+label{
+    display:block;
+    width:80%;
+    margin-top:15px;
+    margin-bottom: 5px;
+}
+
+#loadingDiv{
+    position: fixed;
+    top: 30%;
+    left: 40%;
+}
+
+input[type="text"],input[type="password"],input[type="email"],textarea,select{
+    width: 70%;
+    padding:8px;
+}
+
+button, input[type="submit"]{
+    width: 30%;
+    padding: 8px;
+    margin-top: 20px;
+    color:white;
+    cursor:pointer;
+    background: #00AA33;
+    border: 1px solid #047245;
+    transition: all 300ms;
+}
+
+.right{
+    float:right !important;
+}
+.center{
+    text-align: center;
+}
+table{
+    width:100%;
+}
+
+table th{ 
+    background-color: #ccc;
+}
+
+table td{
+    background-color: #eee;
+
+}
+
+.btn{
+    text-decoration: none;
+    padding: 5px;
+  width: 60px;
+    border: 1px solid black;
+    display: block;
+    float: left;
+    text-align: center;
+    margin-left:1%;
+    margin-top:0.5%;
+    color:white;
+
+}
+.btn-show{
+    background-color: #00AA33;
+}
+
+.btn-edit{
+    background-color: #F5871F;
+}
+.btn-delete{
+    background-color: #C82829;
+}
+
+.btn-new{
+    background-color: #2199e8;
+    margin-bottom: 10px;
+}
+
+.btn-info-lg{
+    width: 160px;
+}
+
+#results{
+    margin-top:5%;
+}

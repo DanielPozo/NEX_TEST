@@ -1,0 +1,24 @@
+index:
+    path: /
+    controller: App\Controller\NexController::index
+show_data:
+    path: /mostrar_datos
+    controller: App\Controller\NexController::show_data   
+add_activity:
+    path: /nueva_actividad
+    controller: App\Controller\NexController::add_activity
+delete_activity:
+    path: /borrar_actividad/{id}
+    controller: App\Controller\NexController::delete_activity
+modify_priority:
+    path: /modificar_prioridad
+    controller: App\Controller\NexController::modify_priority    
+generate_all_activity:
+    path: /generar_actividades
+    controller: App\Controller\NexController::generate_all_activity
+delete_all_activity:
+    path: /borrar_toda_actividad
+    controller: App\Controller\NexController::delete_all_activity    
+    
+    
+    

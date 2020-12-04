@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('build/css/app.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('assets/css/style.css') }}" type="text/css" rel="stylesheet" />
+
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                {% block header %}
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4" id="menu">
+                        <nav class="navbar  sticky-top navbar-dark bg-dark">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item  {% if( app.request.get('_route') == 'index') %} active {% endif %} ">
+                                    <a class="nav-link" href="{{ path('index') }}">Listar Actividades</a>
+                                </li>
+                                <li class="nav-item  {% if( app.request.get('_route') == 'add_activity') %} active {% endif %} ">
+                                    <a class="nav-link" href="{{ path('add_activity') }}">Añadir Actividades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('generate_all_activity') }}">Generar Archivo Básico de Actividades </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('delete_all_activity') }}">Borrar Todas las Actividades</a>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                {% endblock %}
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8" id="cuerpo">
+                    {% block body %}{% endblock %}
+                </div>
+
+                <img src="assets/images/preloader.gif" id="loadingDiv" style="display:none">
+            </div>
+        </div>
+
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+
+    </body>
+</html>
